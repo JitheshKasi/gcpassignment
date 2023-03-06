@@ -33,7 +33,7 @@ def execute_query(query, args=()):
 def commit():
     get_db().commit()
 
-@app.route("/")
+@app.route("/", methods =['POST', 'GET'])
 def hello():
     execute_query("DROP TABLE IF EXISTS userstable")
     execute_query("CREATE TABLE userstable (firstname text,lastname text,email text)")
