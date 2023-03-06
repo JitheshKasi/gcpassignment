@@ -121,7 +121,7 @@
   <main>
     <h1>Enter the Details</h1>
 
-    <form id="contact-form" method="post">
+    <form id="contact-form" action="{{url_for('startinquiry')}}" method="post">
       <label for="ufname">First Name</label>
       <input type="text" placeholder="Enter First Name" name="ufname" required>
 
